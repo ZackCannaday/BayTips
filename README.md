@@ -1,46 +1,32 @@
-# BayTips
+# React + TypeScript + Vite
 
-Mobile-first training app for **automotive service advisors** and **lube technicians**.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Current version: 0.2
+Currently, two official plugins are available:
 
-**12 services** fully detailed:
-- Oil Change & Filter
-- Cabin Air Filter
-- Engine Air Filter
-- Transmission Fluid Service
-- Coolant / Antifreeze Service
-- Brake Fluid Flush
-- Tire Rotation & Inspection
-- Wiper Blade Replacement
-- Battery Test & Service
-- Fuel Filter Replacement
-- Differential Fluid Service
-- Power Steering Fluid Service
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-**Soft skills expanded:**
-- 6 objection drills
-- 5 follow-up scripts
-- 3 upsell / call frameworks
+## React Compiler
 
-**Practice quiz:** 10 questions matched to the services above
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Live site
-After enabling GitHub Pages (Settings → Pages → main branch / root):
+## Expanding the Oxlint configuration
 
-**https://zackcannaday.github.io/BayTips/**
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-## How to update the live app
-The full app is a single `index.html` file.
-
-1. Download the latest `index-v2.html` from the conversation or artifacts
-2. In this repo, replace `index.html` with that file (rename to `index.html`)
-3. Commit
-4. Wait ~1 minute and refresh the Pages URL
-
-## Local testing
-```bash
-python3 -m http.server 8080
-# or
-npx serve
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
 ```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
