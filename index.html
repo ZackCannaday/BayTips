@@ -52,13 +52,21 @@
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
   </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@19.1.0",
+      "react-dom": "https://esm.sh/react-dom@19.1.0",
+      "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+      "react/jsx-runtime": "https://esm.sh/react@19.1.0/jsx-runtime",
+      "react-router-dom": "https://esm.sh/react-router-dom@7.6.1?external=react,react-dom",
+      "lucide-react": "https://esm.sh/lucide-react@0.511.0?external=react"
+    }
+  }
+  </script>
 </head>
 <body>
   <div id="root"></div>
-  <p style="padding:2rem;color:#94a3b8;text-align:center;font-family:system-ui">
-    Loading BayTips…<br><br>
-    If this stays blank, the full app needs to be served over HTTPS (not opened as a local file).<br><br>
-    Go to the GitHub repo and enable GitHub Pages, or ask me to finish deploying the complete version.
-  </p>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
