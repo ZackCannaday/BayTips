@@ -2,32 +2,45 @@
 
 Mobile-first training app for **automotive service advisors** and **lube technicians**.
 
-## Current status
-Core app is pushed and working:
-- 4 fully fleshed services (Oil Change, Cabin Filter, Engine Air Filter, Transmission Fluid)
-- Full soft skills (daily checklist, objection drills, follow-up scripts, upsell frameworks)
-- Practice quizzes
-- Search, categories, sales scripts (Beginner / Intermediate / Closer), cause & effect, objections
+## Current version: 0.2
 
-More services can be added to `data.js` over time.
+**12 services** fully detailed:
+- Oil Change & Filter
+- Cabin Air Filter
+- Engine Air Filter
+- Transmission Fluid Service
+- Coolant / Antifreeze Service
+- Brake Fluid Flush
+- Tire Rotation & Inspection
+- Wiper Blade Replacement
+- Battery Test & Service
+- Fuel Filter Replacement
+- Differential Fluid Service
+- Power Steering Fluid Service
 
-## How to run
+**Soft skills expanded:**
+- 6 objection drills
+- 5 follow-up scripts
+- 3 upsell / call frameworks
 
-### Live (recommended)
-1. Go to **Settings → Pages**
-2. Source: Deploy from a branch → **main** → **/ (root)**
-3. Save
-4. Wait ~1 minute, then open:  
-   **https://zackcannaday.github.io/BayTips/**
+**Practice quiz:** 10 questions matched to the services above
 
-### Local
+## Live site
+After enabling GitHub Pages (Settings → Pages → main branch / root):
+
+**https://zackcannaday.github.io/BayTips/**
+
+## How to update the live app
+The full app is a single `index.html` file.
+
+1. Download the latest `index-v2.html` from the conversation or artifacts
+2. In this repo, replace `index.html` with that file (rename to `index.html`)
+3. Commit
+4. Wait ~1 minute and refresh the Pages URL
+
+## Local testing
 ```bash
-npx serve
-# or
 python3 -m http.server 8080
+# or
+npx serve
 ```
-
-## Files
-- `index.html` – entry point
-- `data.js` – services + soft skills content
-- `app.js` – React application
